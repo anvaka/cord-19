@@ -248,3 +248,12 @@ node print-stats.js ~/Downloads/2020-03-13
 ## License
 
 Code in this repository is licensed under MIT license.
+
+### COVID DATASET LICENSE AGREEMENT
+
+By accessing, downloading or otherwise using any Journals, Articles, Metadata, Abstracts, Full-Texts or any other content types provided in the COVID-19 Open Research Dataset (CORD-19) Database (the “Data”), You expressly acknowledge and agree to the following:
+
+* AI2 grants to You a worldwide, perpetual, non-exclusive, non-transferable license to use and make derivatives of the Data for text and data mining only.
+* AI2 warrants that it has the right to make the Data available to You as provided for in and subject to this Agreement and in accordance with applicable law. EXCEPT FOR THE LIMITED WARRANTY IN THIS SECTION, THE DATA IS PROVIDED “AS IS”, WITHOUT ANY WARRANTIES OF ANY KIND.
+* You agree to comply with all applicable local, state, national, and international laws and regulations with respect to AI2’s license and Your use of the Data.
+* Data provided by AI2 is from copyrighted sources of the respective copyright holders. You are solely responsible for Your and Your users’ compliance with any copyright, patent or trademark restrictions and are referred to the copyright, patent or trademark notices appearing in the original sources, all of which are hereby incorporated by reference.
