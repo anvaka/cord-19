@@ -54,19 +54,19 @@ var rank = pagerank(graph);
 
 printStats('Highest PageRank', rank);
 
-var outCentrality = centrality.degree(graph, 'out');
-printStats('Most citations', outCentrality);
+// var outCentrality = centrality.degree(graph, 'out');
+// printStats('Most citations', outCentrality);
 
 function printStats(title, metrics, count = 100) {
   let sorted = Object.keys(metrics)
     .sort((a, b) => metrics[b] - metrics[a])
     .slice(0, count)
     .map((x, pos) => {
-      return `${pos + 1}.[${x}](https://www.google.com/search?q=${encodeURIComponent(x)}) - ${metrics[x]}`;
+      return `${pos + 1}. [${x}](https://www.google.com/search?q=${encodeURIComponent(x)}) - ${metrics[x]}`;
     }).join('\n')
 
   console.log('')
-  console.log('# ' + title)
+  console.log('## ' + title)
   console.log('');
   console.log(sorted);
 }
