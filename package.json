@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "ngraph.centrality": "^2.0.0",
+    "ngraph.graph": "^19.0.3",
+    "ngraph.offline.layout": "^1.1.1",
+    "ngraph.pagerank": "^2.0.0",
+    "ngraph.tobinary": "^1.0.2"
+  }
+}
