@@ -1,4 +1,4 @@
-# Exploring papers coronavirus research papers
+# Exploring coronavirus research papers
 
 This repository explores a graph of research papers released 
 during [COVID-19 Open Research Dataset Challenge (CORD-19)](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge)
