@@ -1,8 +1,9 @@
 let fs = require('fs');
-let centrality = require('ngraph.centrality');
 
 let path = require('path');
 let graph = require('ngraph.graph')();
+let save = require('ngraph.tobinary');
+
 let {directories, ignorePatterns} = require('./getSettings')();
 
 directories.forEach(dirPath => {
@@ -27,27 +28,9 @@ directories.forEach(dirPath => {
   })
 });
 
-var inCentrality = centrality.degree(graph, 'in');
-printStats('Most cited', inCentrality);
-
-var pagerank = require('ngraph.pagerank');
-var rank = pagerank(graph);
-
-printStats('Highest PageRank', rank);
-
-// var outCentrality = centrality.degree(graph, 'out');
-// printStats('Most citations', outCentrality);
-
-function printStats(title, metrics, count = 100) {
-  let sorted = Object.keys(metrics)
-    .sort((a, b) => metrics[b] - metrics[a])
-    .slice(0, count)
-    .map((x, pos) => {
-      return `${pos + 1}. [${x}](https://www.google.com/search?q=${encodeURIComponent(x)}) - ${metrics[x]}`;
-    }).join('\n')
-
-  console.log('')
-  console.log('## ' + title)
-  console.log('');
-  console.log(sorted);
-}
+save(graph, { outDir: './data' });
+var layout = require('ngraph.offline.layout')(graph);
+console.log('Starting layout. This will take a while...');
+layout.run();
+console.log('Layout completed. Saving to binary format');
+console.log('Done.');
